@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       <div className="hidden md:block absolute w-full h-full bg-[#FF7347]/30 z-[-1]" />
       <img
         className="hidden md:block absolute w-full h-full object-center object-cover z-[-3]"
-        src="/flowers-background.jpg"
+        src="/header-background.jpg"
         alt="background flowers"
       />
       <div className="relative py-4 md:py-10 max-w-screen-2xl mx-7 2xl:mx-auto flex justify-between md:justify-center items-center">
