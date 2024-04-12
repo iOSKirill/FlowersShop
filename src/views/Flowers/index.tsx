@@ -3,6 +3,7 @@ import FlowerList from "../../components/FlowerList";
 import FlowersImage from "../../assets/flowers.jpg";
 import { IFlower } from "../../models/flowers.model";
 import OneLineForm from "../Main/OneLineForm";
+import TulpansBackground from "../../assets/tulpans-background.jpg"
 
 const flowers: IFlower[] = [
   {
@@ -137,7 +138,7 @@ const Flowers: React.FC = () => {
       <section
         className="relative mt-10 md:mt-20"
         style={{
-          backgroundImage: `url(./tulpans-background.jpg)`,
+          backgroundImage: `url(${TulpansBackground})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}

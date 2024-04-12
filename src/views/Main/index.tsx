@@ -6,6 +6,11 @@ import OfferImage from "../../assets/offer-flower.jpg";
 import OfferList from "../../components/OfferList";
 import OneLineForm from "./OneLineForm";
 import FlowersCarousel from "../../components/FlowersCarousel";
+import FlowerBackground from "../../assets/flowers-background.jpg"
+import YellowFlowersBackground from "../../assets/yellow-flowers-background.jpg"
+import Flowers1 from "../../assets/flower-1.jpg"
+import Flowers2 from "../../assets/flower-2.jpg"
+import Flowers3 from "../../assets/flower-3.jpg"
 
 const flowers: IFlower[] = [
   {
@@ -121,15 +126,15 @@ const flowers: IFlower[] = [
 const flowerPics = [
   {
     id: 1,
-    image: "/flower-1.jpg",
+    image: Flowers1,
   },
   {
     id: 2,
-    image: "/flower-2.jpg",
+    image: Flowers2,
   },
   {
     id: 3,
-    image: "/flower-3.jpg",
+    image: Flowers3,
   },
 ];
 
@@ -184,7 +189,7 @@ const Main: React.FC = () => {
       <section
         className="object-center object-cover space-y-10 flex flex-col justify-center relative mt-20"
         style={{
-          backgroundImage: `url(./flowers-background.jpg)`,
+          backgroundImage: `url(${FlowerBackground})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -226,7 +231,7 @@ const Main: React.FC = () => {
       <section
         className="relative"
         style={{
-          backgroundImage: `url(./yellow-flowers-background.jpg)`,
+          backgroundImage: `url(${YellowFlowersBackground})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
