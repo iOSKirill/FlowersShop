@@ -39,7 +39,6 @@ interface IProps {
 }
 
 const Navbar: React.FC<IProps> = ({ isBurgerOpen }) => {
-  console.log(isBurgerOpen);
   return (
     <>
       <nav className="hidden md:flex space-x-[60px]">
@@ -47,7 +46,7 @@ const Navbar: React.FC<IProps> = ({ isBurgerOpen }) => {
           <Link
             key={item.id}
             to={item.href}
-            className="text-white text-[20px] font-bold hover:text-[#FF7347]"
+            className="text-white text-[20px] font-bold hover:text-[#FF7347] hover:cursor-pointer"
           >
             {item.name}
           </Link>

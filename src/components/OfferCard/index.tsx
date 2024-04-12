@@ -8,14 +8,16 @@ interface IProps {
 const OfferCard: React.FC<IProps> = ({ offer }) => {
   return (
     <li
-      className="relative object-center object-cover w-full h-[30rem] p-[30px]"
+      className="relative object-center object-cover w-full h-[20rem] md:h-[30rem] p-[20px] md:p-[30px]"
       style={{
         backgroundImage: `url(${offer.image})`,
       }}
     >
       <div className="relative w-full h-full">
         <div className="absolute bg-white/90 w-full bottom-0 p-6">
-          <p className="text-[30px] font-semibold">{offer.title}</p>
+          <p className="text-[20px] md:text-[30px] font-semibold">
+            {offer.title}
+          </p>
           <a className="underline font-light" href="/">
             SHOP NOW
           </a>

@@ -1,11 +1,8 @@
 import React from "react";
-import { IFlower } from "../../models/flowers.model";
+import FlowerList from "../../components/FlowerList";
 import FlowersImage from "../../assets/flowers.jpg";
-import FlowersShop from "../../assets/flowers-shop.jpg";
-import OfferImage from "../../assets/offer-flower.jpg";
-import OfferList from "../../components/OfferList";
-import OneLineForm from "./OneLineForm";
-import FlowersCarousel from "../../components/FlowersCarousel";
+import { IFlower } from "../../models/flowers.model";
+import OneLineForm from "../Main/OneLineForm";
 
 const flowers: IFlower[] = [
   {
@@ -118,115 +115,29 @@ const flowers: IFlower[] = [
   },
 ];
 
-const flowerPics = [
-  {
-    id: 1,
-    image: "/flower-1.jpg",
-  },
-  {
-    id: 2,
-    image: "/flower-2.jpg",
-  },
-  {
-    id: 3,
-    image: "/flower-3.jpg",
-  },
-];
-
-const offers = [
-  {
-    id: 1,
-    title: "Birthday Gifs From 50$",
-    image: OfferImage,
-  },
-  {
-    id: 2,
-    title: "Wedding Bouquets From 100$",
-    image: OfferImage,
-  },
-  {
-    id: 3,
-    title: "Flower Arrangements From 30$",
-    image: OfferImage,
-  },
-];
-
-const Main: React.FC = () => {
-  const handleClick = () => {
-    alert("Никита Васильевич, поставьте зачет, пожалуйста!");
-  };
-
+const Flowers: React.FC = () => {
   return (
     <main className="py-20">
-      <section className="max-w-screen-2xl mx-5 2xl:mx-auto">
-        <FlowersCarousel flowers={flowers} />
-      </section>
+      <div className="space-y-2">
+        <h1 className="text-[48px] md:text-[60px] font-rosarivo text-center">
+          Flowers
+        </h1>
+        <p className="max-w-screen-2xl mx-5 2xl:mx-auto text-center text-base md:text-[20px] text-[#717171]">
+          Lorem ipsum dolor sit amet consectetur. Volutpat sed dui pellentesque
+          lorem. Ut fames elementum et molestie nulla sed et. Sed eget blandit
+          euismod maecenas sed purus suspendisse. A sit interdum etiam id eget
+          vitae orci aliquam ac.
+        </p>
+      </div>
 
-      <section className="flex flex-col md:flex-row gap-y-10 md:gap-x-20 items-start md:items-center max-w-screen-2xl mx-5 2xl:mx-auto mt-20">
-        <img
-          className="w-full md:w-[63%] h-[50%] object-center object-cover"
-          src={FlowersShop}
-          alt="flowers shop"
-        />
-
-        <div className="space-y-[20px] text-[20px] font-medium">
-          <p>OUR STORE</p>
-          <p className="text-[#434141]">Blossom Havenc/floral 523</p>
-          <p className="text-[#434141]">
-            Monday - 9am-5pm
-            <br /> Tuesday - Friday 9am-7pm
-            <br /> Sat - 9am-6pm
-            <br /> Sun - Closed
-          </p>
-        </div>
+      <section className="mt-10 md:mt-20 max-w-screen-2xl mx-5 2xl:mx-auto">
+        <FlowerList className="grid-cols-2" flowers={flowers} />
       </section>
 
       <section
-        className="object-center object-cover space-y-10 flex flex-col justify-center relative mt-20"
+        className="relative mt-10 md:mt-20"
         style={{
-          backgroundImage: `url(./flowers-background.jpg)`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="absolute w-full h-full bg-[#FFE6B7]/50 z-[0]" />
-        <div className="max-w-screen-2xl mx-5 2xl:mx-auto relative py-10 space-y-10">
-          <div className="space-y-2">
-            <p className="text-base md:text-[20px] font-semibold text-[#717171] text-center">
-              @Blossom Haven
-            </p>
-            <p className="text-[20px] md:text-[30px] font-rosarivo text-[#292D32] text-center">
-              Follow us on Instagram
-            </p>
-          </div>
-
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-            {flowerPics.map((flowerPic) => (
-              <li key={flowerPic.id} className="w-full h-[20rem] md:h-[40rem]">
-                <img
-                  className="object-cover object-center w-full h-full"
-                  src={flowerPic.image}
-                  alt={`flower-${flowerPic.id}`}
-                />
-              </li>
-            ))}
-          </ul>
-
-          <div className="w-full flex justify-center items-center">
-            <button
-              className="bg-white py-[20px] px-[70px] text-[#717171] text-[20px]"
-              onClick={handleClick}
-            >
-              Join our Feed
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="relative"
-        style={{
-          backgroundImage: `url(./yellow-flowers-background.jpg)`,
+          backgroundImage: `url(./tulpans-background.jpg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -252,11 +163,7 @@ const Main: React.FC = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row gap-y-10 md:gap-x-20 items-center max-w-screen-2xl mx-5 2xl:mx-auto mt-20">
-        <OfferList offers={offers} />
-      </section>
-
-      <section className="flex flex-col md:flex-row space-y-6 md:space-y-0 space-x-0 md:space-x-10 justify-center items-center max-w-screen-2xl mx-5 2xl:mx-auto mt-20 md:mt-40">
+      <section className="flex flex-col md:flex-row space-y-6 md:space-y-0 space-x-0 md:space-x-10 justify-center items-center max-w-screen-2xl mx-5 2xl:mx-auto mt-10 md:mt-20">
         <div className="space-y-1">
           <p className="text-[24px] font-semibold">
             Get the Latest From Blossom Haven
@@ -273,4 +180,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default Flowers;
