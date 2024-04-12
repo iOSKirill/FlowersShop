@@ -2,7 +2,7 @@
   "name": "flowers-shop",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ioskirill.github.io/FlowersShop",
+  "homepage": "https://iOSKirill.github.io/FlowersShop",
   "type": "module",
   "scripts": {
     "dev": "vite",
