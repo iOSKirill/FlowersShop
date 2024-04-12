@@ -1,5 +1,5 @@
 export const ROUTES = {
-  MAIN: "/FlowersShop/",
-  FLOWERS: "/FlowersShop/flowers",
+  MAIN: "/",
+  FLOWERS: "/flowers",
   DEFAULT: "*",
 };
